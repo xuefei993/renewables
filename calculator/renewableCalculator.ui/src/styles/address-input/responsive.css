@@ -1,0 +1,195 @@
+/* Address Input - Responsive Design */
+
+/* Mobile responsive for help modal */
+@media (max-width: 768px) {
+  .help-modal-overlay {
+    padding: 1rem;
+  }
+  
+  .help-modal {
+    max-height: 85vh;
+  }
+  
+  .help-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .help-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .help-content {
+    padding: 1.5rem;
+  }
+  
+  .method-selector-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .help-icon-btn {
+    align-self: center;
+  }
+}
+
+/* General Mobile Layout */
+@media (max-width: 768px) {
+  .address-input-step {
+    max-width: 100%;
+  }
+  
+  .method-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .method-tab {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .method-content {
+    padding: 1.5rem;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .search-btn {
+    min-width: auto;
+  }
+  
+  /* Property Information Mobile Styles */
+  .property-information {
+    margin: 2rem 0 1.5rem 0;
+    padding: 1.5rem;
+  }
+  
+  .property-information h3 {
+    font-size: 1.2rem;
+  }
+  
+  .property-information p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .property-form {
+    gap: 1.25rem;
+  }
+  
+  .form-group label {
+    font-size: 0.95rem;
+  }
+  
+  .form-select {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* Field Help Button Mobile */
+  .form-label-with-help {
+    gap: 0.5rem;
+  }
+  
+  .field-help-btn {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+  
+  /* Field Help Modal Mobile */
+  .field-help-overlay {
+    padding: 1rem;
+  }
+  
+  .field-help-modal {
+    max-height: 85vh;
+    border-radius: 12px;
+  }
+  
+  .field-help-header {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
+  
+  .field-help-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .field-help-close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+  
+  .field-help-content {
+    padding: 1.5rem;
+  }
+  
+  .field-help-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .chart-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .climate-chart {
+    width: 100%;
+    height: auto;
+  }
+  
+  .chart-stats-combined {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .stat {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.25rem;
+  }
+  
+  .tooltip-content {
+    min-width: 200px;
+    font-size: 0.85rem;
+  }
+  
+  /* 移动端图表尺寸调整 */
+  .chart-wrapper {
+    padding: 0.5rem;
+    overflow-x: auto;
+  }
+  
+  .climate-chart-container {
+    padding: 1.5rem;
+  }
+  
+  .combined-chart-container h4 {
+    font-size: 1.2rem;
+  }
+  
+  .chart-header h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablet and Medium Screen Adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .property-form {
+    gap: 1.25rem;
+  }
+  
+  .form-select {
+    padding: 0.8rem;
+  }
+} 

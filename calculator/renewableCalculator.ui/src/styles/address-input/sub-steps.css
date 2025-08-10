@@ -1,0 +1,73 @@
+/* Sub-step Navigation Styles */
+.sub-step-navigation {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.sub-step-progress {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.sub-step-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sub-step-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #f9fafb;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.sub-step-label.active {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.sub-step-label.completed {
+  color: #059669;
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+.sub-step-label.completed::after {
+  content: " ✓";
+  font-weight: bold;
+}
+
+.sub-step-content {
+  min-height: 400px;
+}
+
+/* Responsive Design for Sub-steps */
+@media (max-width: 768px) {
+  .sub-step-labels {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+} 

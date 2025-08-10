@@ -1,0 +1,164 @@
+/* Responsive Design Styles */
+
+@media (max-width: 768px) {
+  .config-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .area-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .area-value {
+    font-size: 1.3rem;
+  }
+  
+  .roof-size-display {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /* Mobile compass adjustments - larger transparent design with minimize functionality */
+  .compass-container {
+    padding: 15px;
+    background: transparent; /* Keep transparent on mobile */
+  }
+
+  .compass-container.minimized {
+    padding: 8px;
+  }
+
+  /* Mobile compass header and minimize button */
+  .compass-header {
+    top: 3px;
+    right: 3px;
+  }
+
+  .compass-minimize-btn {
+    min-width: 65px; /* Increased for English text on mobile */
+    height: 24px; /* Smaller height on mobile */
+    font-size: 10px;
+    padding: 0 6px; /* Reduced padding */
+    gap: 3px; /* Smaller gap */
+  }
+
+  .compass-minimize-btn .btn-icon {
+    font-size: 10px;
+  }
+
+  .compass-minimize-btn .btn-text {
+    font-size: 9px;
+  }
+
+  .compass-minimize-btn.expand {
+    min-width: 65px; /* Same width for consistency on mobile */
+  }
+
+  /* Mobile minimized state */
+  .compass-minimized {
+    padding: 6px 10px;
+    gap: 8px; /* Slightly larger gap for text button */
+    min-width: 115px; /* Increased for English text button on mobile */
+  }
+
+  .compass-mini-icon {
+    font-size: 14px;
+  }
+
+  .compass {
+    width: 160px; /* Smaller on mobile but still larger than original */
+    height: 160px;
+    background: transparent; /* Keep transparent on mobile */
+    border: none;
+  }
+
+  /* Mobile radial lines - thinner */
+  .compass::before {
+    width: 160px;
+    height: 160px;
+    background: 
+      /* North (0°) */
+      linear-gradient(0deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* NNE (22.5°) */
+      linear-gradient(22.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* NE (45°) */
+      linear-gradient(45deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* ENE (67.5°) */
+      linear-gradient(67.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* East (90°) */
+      linear-gradient(90deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* ESE (112.5°) */
+      linear-gradient(112.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* SE (135°) */
+      linear-gradient(135deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* SSE (157.5°) */
+      linear-gradient(157.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* South (180°) */
+      linear-gradient(180deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* SSW (202.5°) */
+      linear-gradient(202.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* SW (225°) */
+      linear-gradient(225deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* WSW (247.5°) */
+      linear-gradient(247.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* West (270°) */
+      linear-gradient(270deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* WNW (292.5°) */
+      linear-gradient(292.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%),
+      /* NW (315°) */
+      linear-gradient(315deg, transparent 49.5%, rgba(255, 255, 255, 0.8) 49.5%, rgba(255, 255, 255, 0.8) 50.5%, transparent 50.5%),
+      /* NNW (337.5°) */
+      linear-gradient(337.5deg, transparent 49.75%, rgba(255, 255, 255, 0.6) 49.75%, rgba(255, 255, 255, 0.6) 50.25%, transparent 50.25%);
+    mask: radial-gradient(circle, transparent 25px, black 25px);
+    -webkit-mask: radial-gradient(circle, transparent 25px, black 25px);
+  }
+
+  .compass-center {
+    width: 28px;
+    height: 28px;
+    background: rgba(59, 130, 246, 0.9);
+    border: 2px solid white;
+    z-index: 10;
+  }
+
+  .compass-needle {
+    width: 3px;
+    height: 16px;
+  }
+
+  .compass-direction {
+    font-size: 12px;
+    padding: 4px 6px;
+    min-width: 22px;
+  }
+
+  .compass-direction.cardinal {
+    font-size: 13px;
+    min-width: 26px;
+    background: rgba(220, 38, 38, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .compass-direction.intermediate {
+    font-size: 11px;
+    min-width: 20px;
+    background: rgba(55, 65, 81, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .compass-label {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 10px; /* Reduced padding for mobile */
+    border-radius: 6px;
+    margin-top: 10px; /* Reduced spacing for mobile */
+  }
+
+  .compass-label small {
+    font-size: 11px; /* Slightly larger for mobile since it's the only text */
+    color: rgba(255, 255, 255, 0.9);
+  }
+} 

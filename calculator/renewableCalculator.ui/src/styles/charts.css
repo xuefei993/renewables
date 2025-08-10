@@ -1,0 +1,218 @@
+/* Monthly Charts Styles */
+.monthly-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.chart-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.chart-section h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.monthly-data {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem;
+  height: 200px;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.month-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.month-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+  writing-mode: horizontal-tb;
+}
+
+.bar-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  margin-bottom: 0.25rem;
+}
+
+.savings-bar, .generation-bar {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.3s ease;
+}
+
+.savings-bar {
+  background: linear-gradient(to top, #27ae60, #2ecc71);
+}
+
+.generation-bar {
+  background: linear-gradient(to top, #f39c12, #f1c40f);
+}
+
+.month-value {
+  font-size: 0.7rem;
+  color: #495057;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+}
+
+.annual-total {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 2px solid #3498db;
+  color: #2c3e50;
+}
+
+/* Carbon Impact Styles */
+.carbon-summary {
+  margin-bottom: 2rem;
+}
+
+.carbon-headline {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.carbon-headline h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.carbon-headline p {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.equivalents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.equivalent-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.equivalent-item strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.equivalent-item span {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.carbon-breakdown h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.carbon-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background-color: #f8fff8;
+  border-radius: 6px;
+  border-left: 4px solid #27ae60;
+}
+
+.carbon-system {
+  flex: 1;
+}
+
+.carbon-system strong {
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.carbon-type {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.carbon-reduction {
+  color: #27ae60;
+  font-weight: bold;
+  margin: 0 1rem;
+  text-align: right;
+  min-width: 140px;
+}
+
+.carbon-description {
+  flex: 1.5;
+  color: #495057;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: right;
+}
+
+/* Responsive Design for Charts */
+@media (max-width: 1024px) {
+  .monthly-charts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .equivalents {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .monthly-data {
+    grid-template-columns: repeat(6, 1fr);
+    height: 150px;
+  }
+  
+  .month-label {
+    font-size: 0.7rem;
+  }
+  
+  .month-value {
+    font-size: 0.65rem;
+  }
+  
+  .carbon-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .carbon-reduction,
+  .carbon-description {
+    text-align: left;
+    min-width: auto;
+  }
+} 

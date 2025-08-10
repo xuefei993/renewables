@@ -1,0 +1,187 @@
+/* Tariffs Styles */
+.tariff-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.tariff-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tariff-section h4 {
+  color: #34495e;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Info message styles */
+.info-message {
+  background-color: #e8f4f8;
+  border: 1px solid #bee5eb;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #17a2b8;
+}
+
+.info-message p {
+  margin: 0;
+  color: #0c5460;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.time-of-use-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #e8f4fd;
+  border-radius: 6px;
+  border: 1px solid #3498db;
+}
+
+.time-of-use-section .form-row {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.usage-distribution-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+  border: 1px solid #3498db;
+}
+
+.usage-distribution-section h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.off-peak-usage-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #6c757d;
+}
+
+.off-peak-usage-section h4 {
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.off-peak-usage-section h5 {
+  color: #495057;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.economy-rates-section .off-peak-usage-section {
+  background-color: #f0f8ff;
+  border: 1px solid #3498db;
+}
+
+.section-description {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.usage-distribution-section .form-row {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.usage-validation {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.validation-success {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.validation-warning {
+  color: #e67e22;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tariff-summary {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #e8f5e8;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60;
+}
+
+.tariff-summary h3 {
+  color: #27ae60;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #d5dbdb;
+}
+
+.summary-label {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.summary-value {
+  font-weight: bold;
+  color: #27ae60;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .time-of-use-section .form-row,
+  .usage-distribution-section .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tariff-section,
+  .off-peak-usage-section {
+    padding: 1rem;
+  }
+  
+  .off-peak-usage-section h4,
+  .off-peak-usage-section h5 {
+    font-size: 0.9rem;
+  }
+} 

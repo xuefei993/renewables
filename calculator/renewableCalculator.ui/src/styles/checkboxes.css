@@ -1,0 +1,129 @@
+/* Checkbox Group Styles */
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.checkbox-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-item:hover {
+  background-color: #f0f0f0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.checkbox-label input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #bdc3c7;
+  border-radius: 3px;
+  margin-right: 0.75rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Device Information Styles */
+.device-info {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #e8f4fd;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+}
+
+.device-input-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.device-input-group:last-child {
+  margin-bottom: 0;
+}
+
+.device-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.device-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.device-input.small {
+  flex: 0.6;
+}
+
+.device-input::placeholder {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* No renewables option */
+.no-renewables {
+  border-color: #95a5a6;
+  background-color: #ecf0f1;
+}
+
+.no-renewables .checkbox-label {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.no-renewables:hover {
+  background-color: #d5dbdb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .device-input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .device-input.small {
+    flex: 1;
+  }
+} 

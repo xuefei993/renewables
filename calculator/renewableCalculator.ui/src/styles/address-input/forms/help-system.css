@@ -1,0 +1,178 @@
+/* Help System */
+
+/* Field Help Button */
+.field-help-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.field-help-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+.field-help-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+/* Field Help Modal Styles */
+.field-help-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+}
+
+.field-help-modal {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.field-help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.field-help-header h3 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.field-help-close-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.field-help-close-btn:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.field-help-content {
+  padding: 2rem;
+}
+
+.field-help-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.field-help-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Special styling for bullet points */
+.field-help-content p:contains("•") {
+  margin-left: 1rem;
+  color: #555;
+}
+
+/* Help guide image styles */
+.help-image-container {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.help-guide-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Form Helper Links */
+.form-helper {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.helper-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.helper-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.helper-link:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive adjustments for help images */
+@media (max-width: 768px) {
+  .help-image-container {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .help-guide-image {
+    max-height: 280px;
+  }
+} 

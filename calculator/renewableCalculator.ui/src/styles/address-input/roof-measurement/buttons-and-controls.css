@@ -1,0 +1,173 @@
+/* Custom Checkbox */
+.selection-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+.selection-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.selection-checkbox:hover .checkmark {
+  border-color: #3b82f6;
+}
+
+.selection-checkbox input[type="checkbox"]:checked + .checkmark {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.selection-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Button Group Enhancements */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .config-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .breakdown-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+  }
+  
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .roof-configuration {
+    padding: 1rem;
+  }
+  
+  .result-value {
+    font-size: 1.5rem;
+  }
+  
+  .result-item.main-result .result-value {
+    font-size: 1.7rem;
+  }
+  
+  .formula-display {
+    padding: 0.75rem;
+  }
+  
+  .formula-display p {
+    font-size: 0.85rem;
+  }
+
+  .potential-result-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .potential-result-header h4 {
+    min-width: unset;
+    margin-bottom: 1rem;
+  }
+
+  .btn-add-roof {
+    align-self: center;
+    min-width: 200px;
+  }
+
+  .add-another-roof-instruction {
+    padding: 1rem;
+  }
+
+  .add-another-roof-instruction p {
+    font-size: 0.9rem;
+  }
+
+  .roofs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roof-detail {
+    padding: 0.4rem 0;
+  }
+
+  .added-roofs-section {
+    padding: 1rem;
+  }
+
+  .roofs-selection-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .roof-selection-card {
+    padding: 1rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .button-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+} 

@@ -1,0 +1,49 @@
+/* Import all component-specific styles */
+@import './styles/global.css';
+@import './styles/navigation.css';
+@import './styles/forms.css';
+@import './styles/results.css';
+@import './styles/address-input.css';
+@import './styles/charts.css';
+@import './styles/checkboxes.css';
+@import './styles/demo.css';
+@import './styles/info-panel.css';
+@import './styles/plan-comparison.css';
+@import './styles/results-comparison.css';
+@import './styles/tariffs.css';
+@import './styles/equipment-comparison.css';
+@import './styles/configuration-comparison.css';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,202 @@
+/* Plan Comparison Styles */
+.plan-selector {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.plan-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.plan-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.plan-tab.active {
+  border-color: #3498db;
+  background-color: #e3f2fd;
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.plan-name-input {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+  min-width: 80px;
+  outline: none;
+}
+
+.plan-name-input:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  padding: 0.25rem;
+}
+
+.remove-plan-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+.remove-plan-btn:hover {
+  background-color: #c0392b;
+}
+
+.switch-plan-btn {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.switch-plan-btn:hover {
+  background-color: #7f8c8d;
+}
+
+.add-plan-btn {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-plan-btn::before {
+  content: "+";
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.current-plan-content {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.plan-header h3 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.plan-summary {
+  background-color: #e3f2fd;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.plans-summary {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.plans-summary h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.plan-summary-card {
+  background-color: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.plan-summary-card.current {
+  border-color: #3498db;
+  background-color: #e3f2fd;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+.plan-summary-card h4 {
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.plan-products ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #495057;
+}
+
+.plan-products li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.plan-products .no-products {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments for plan comparison */
+@media (max-width: 768px) {
+  .plan-tabs {
+    flex-direction: column;
+  }
+  
+  .plan-tab {
+    justify-content: space-between;
+  }
+  
+  .plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .switch-plan-btn {
+    display: none;
+  }
+} 

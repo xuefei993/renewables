@@ -1,0 +1,217 @@
+/* Top Navigation */
+.top-navigation {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-left h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.restart-button {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.restart-button:hover {
+  background-color: #c0392b;
+}
+
+/* FAQ Modal */
+.faq-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.faq-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h4 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.close-faq {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Side Navigation */
+.side-navigation {
+  width: 250px;
+  background-color: white;
+  padding: 1.5rem;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.side-navigation h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.progress-steps {
+  margin-bottom: 2rem;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.progress-step:hover {
+  background-color: #f8f9fa;
+}
+
+.progress-step.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.progress-step.completed {
+  background-color: #27ae60;
+  color: white;
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #bdc3c7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.progress-step.active .step-number {
+  background-color: white;
+  color: #3498db;
+}
+
+.progress-step.completed .step-number {
+  background-color: white;
+  color: #27ae60;
+}
+
+.step-title {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.step-check {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.progress-bar {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  display: block;
+  position: relative;
+}
+
+.progress-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-line {
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .side-navigation {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-navigation {
+    padding: 1rem;
+  }
+  
+  .nav-left h1 {
+    font-size: 1.2rem;
+  }
+  
+  .nav-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .side-navigation {
+    padding: 1rem;
+  }
+} 

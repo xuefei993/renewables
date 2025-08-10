@@ -1,0 +1,186 @@
+/* Google Maps Styles */
+
+/* Enhanced Google Maps Container */
+.google-maps-container {
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin-top: 2rem;
+}
+
+.map-controls {
+  padding: 1.5rem;
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.map-controls .btn {
+  margin: 0;
+}
+
+.area-display {
+  color: #059669;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: #ecfdf5;
+  border-radius: 0.5rem;
+  border: 1px solid #10b981;
+}
+
+/* Map Location Controls */
+.map-location-controls {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.map-location-controls h5 {
+  margin: 0 0 0.5rem 0;
+  color: #334155;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.map-location-controls p {
+  margin: 0 0 1rem 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Postcode Input Styles */
+.postcode-location-input {
+  max-width: 400px;
+}
+
+.postcode-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.postcode-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.postcode-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.postcode-input:disabled {
+  background: #f8fafc;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.postcode-input::placeholder {
+  color: #94a3b8;
+  text-transform: none;
+}
+
+.input-group .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.375rem;
+  color: #dc2626;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Loading and Error States */
+.maps-loading {
+  padding: 3rem;
+  text-align: center;
+  color: #6b7280;
+  font-weight: 500;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.maps-error {
+  padding: 3rem;
+  text-align: center;
+  color: #dc2626;
+  font-weight: 500;
+  background: #fef2f2;
+  border-radius: 0.5rem;
+  border: 1px solid #fecaca;
+}
+
+/* Button Styles */
+.btn.btn-outline {
+  background: white;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.btn-outline:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Responsive Design for Google Maps */
+@media (max-width: 768px) {
+  .map-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .map-controls .btn {
+    width: 100%;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .input-group .btn {
+    width: 100%;
+  }
+  
+  .map-location-controls {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-maps-container div[style*="height: 500px"] {
+    height: 350px !important;
+  }
+} 

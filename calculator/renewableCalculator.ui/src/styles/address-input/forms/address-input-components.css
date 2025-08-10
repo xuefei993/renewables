@@ -1,0 +1,116 @@
+/* Address Input Components */
+
+/* Input Container Headings */
+.postcode-input-container h3,
+.location-input-container h3,
+.city-selector-container h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.postcode-input-container p,
+.location-input-container p,
+.city-selector-container p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Postcode Input */
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.postcode-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.postcode-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.postcode-input.error {
+  border-color: #e74c3c;
+}
+
+.search-btn {
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.postcode-examples {
+  background-color: #e8f4fd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.postcode-examples small {
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Location Input */
+.location-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.location-info {
+  background-color: #fff3cd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid #ffc107;
+}
+
+.location-info small {
+  color: #856404;
+  font-size: 0.9rem;
+}
+
+/* City Selector */
+.selector-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.selector-group .form-group {
+  margin-bottom: 0;
+}
+
+.selector-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.selector-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+} 

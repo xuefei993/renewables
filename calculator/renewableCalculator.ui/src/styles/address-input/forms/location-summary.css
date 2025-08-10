@@ -1,0 +1,44 @@
+/* Location Summary */
+
+.location-summary {
+  margin: 2rem 0;
+}
+
+.summary-card {
+  background-color: #e8f5e8;
+  border: 1px solid #d4edda;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #27ae60;
+}
+
+.summary-card h4 {
+  color: #27ae60;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.location-details {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(39, 174, 96, 0.1);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span {
+  color: #666;
+}
+
+.detail-row strong {
+  color: #2c3e50;
+  font-weight: 600;
+} 

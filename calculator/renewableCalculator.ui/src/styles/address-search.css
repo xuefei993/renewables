@@ -1,0 +1,140 @@
+/* Address Search Styles */
+.postcode-search {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.postcode-search input {
+  flex: 1;
+}
+
+.search-btn {
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.address-info {
+  margin-top: 1rem;
+}
+
+.info-box {
+  background-color: #e8f5e8;
+  border: 1px solid #4caf50;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-box.warning {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.info-box h4 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.choice-section {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.choice-btn {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.no-address-found {
+  text-align: center;
+}
+
+.not-found-option {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.custom-info-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #eee;
+}
+
+.section-divider h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.section-divider p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Results Page Styles */
+.results-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.result-category {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.result-category h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.result-category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.result-category li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.result-category li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+} 

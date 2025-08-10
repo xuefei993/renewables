@@ -1,0 +1,550 @@
+.configuration-comparison {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.comparison-header h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.comparison-header p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Configuration Table */
+.configuration-table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.configuration-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 1200px; /* Ensure minimum width for horizontal scroll */
+}
+
+.configuration-table th {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: white;
+  font-weight: 600;
+  padding: 15px 12px;
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* First column (Configuration Name) specific width */
+.configuration-table th:first-child {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.configuration-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f3f4;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* First column td styling */
+.configuration-table td:first-child {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.configuration-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.loading-row {
+  background: #f0f8ff !important;
+  opacity: 0.8;
+}
+
+/* Form Controls */
+.config-name-input {
+  width: 100%;
+  max-width: 180px; /* Slightly smaller than column to allow padding */
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.config-name-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.equipment-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #2c3e50;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.equipment-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.equipment-select:hover {
+  border-color: #bdc3c7;
+}
+
+/* Clickable Headers and Cells */
+.clickable-header {
+  cursor: help;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.clickable-header::after {
+  content: "📊";
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.clickable-header:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.clickable-cell {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.clickable-cell:hover {
+  background: #e3f2fd;
+  color: #1565c0;
+  font-weight: 600;
+  transform: scale(1.02);
+}
+
+/* Remove Button */
+.btn-remove {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remove:hover:not(:disabled) {
+  background: #c0392b;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-remove:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Table Actions */
+.table-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.table-hint {
+  color: #7f8c8d;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Chart Modal - Reuse from equipment-comparison.css */
+.chart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.chart-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.chart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+  background: #f8f9fa;
+}
+
+.chart-modal-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.chart-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chart-close-button:hover {
+  background: #e9ecef;
+  color: #2c3e50;
+}
+
+.chart-container {
+  padding: 20px;
+  height: 400px;
+}
+
+/* Loading State */
+.configuration-comparison-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #7f8c8d;
+}
+
+.configuration-comparison-loading h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.comparison-actions {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.comparison-actions .btn {
+  min-width: 150px;
+}
+
+/* Status Indicators */
+.calculating-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #3498db;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.calculating-indicator::before {
+  content: "⏳";
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Data Highlighting */
+.high-value {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.medium-value {
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.low-value {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Cost breakdown styling for subsidy display */
+.cost-breakdown {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.gross-cost {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.subsidy-deduction {
+  font-size: 12px;
+  color: #27ae60;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.net-cost {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.cost-header-note {
+  font-size: 11px;
+  font-weight: normal;
+  color: #27ae60;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .configuration-table-container {
+    overflow-x: auto;
+  }
+  
+  .configuration-table {
+    min-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .configuration-comparison {
+    padding: 15px;
+  }
+  
+  .configuration-table {
+    font-size: 12px;
+    min-width: 1000px;
+  }
+  
+  .configuration-table th,
+  .configuration-table td {
+    padding: 8px 6px;
+  }
+  
+  .equipment-select {
+    min-width: 150px;
+    font-size: 12px;
+  }
+  
+  .config-name-input {
+    font-size: 12px;
+  }
+  
+  .table-actions {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .chart-modal {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .chart-container {
+    height: 300px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .configuration-table {
+    font-size: 11px;
+    min-width: 900px;
+  }
+  
+  .chart-modal-header h4 {
+    font-size: 16px;
+  }
+  
+  .comparison-header h3 {
+    font-size: 20px;
+  }
+  
+  .comparison-header p {
+    font-size: 14px;
+  }
+}
+
+/* Enhanced Visual Effects */
+.configuration-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.configuration-table tbody tr:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.equipment-select option {
+  padding: 8px;
+}
+
+.equipment-select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.equipment-select::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.equipment-select::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 4px;
+}
+
+.equipment-select::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6;
+}
+
+/* Cost breakdown styling for subsidy display */
+.cost-breakdown {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.gross-cost {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.subsidy-deduction {
+  font-size: 12px;
+  color: #27ae60;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.net-cost {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.cost-header-note {
+  font-size: 11px;
+  font-weight: normal;
+  color: #27ae60;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* Cost breakdown styling for subsidy display */
+.cost-breakdown {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.gross-cost {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.subsidy-deduction {
+  font-size: 12px;
+  color: #27ae60;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.net-cost {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.cost-header-note {
+  font-size: 11px;
+  font-weight: normal;
+  color: #27ae60;
+  margin-top: 2px;
+  font-style: italic;
+} 

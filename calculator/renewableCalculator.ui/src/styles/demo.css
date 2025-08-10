@@ -1,0 +1,142 @@
+/* Demo Mode Styles */
+.demo-mode {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #3498db;
+}
+
+.demo-header h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.demo-steps {
+  margin-bottom: 3rem;
+}
+
+.demo-step {
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.demo-step-number {
+  background-color: #3498db;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.demo-step-content h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.demo-step-content ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.demo-step-content li {
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+.demo-tips {
+  margin-bottom: 2rem;
+}
+
+.demo-tips h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.tip-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-top: 3px solid #27ae60;
+}
+
+.tip-card h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.demo-disclaimer {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.demo-disclaimer h4 {
+  color: #856404;
+  margin-bottom: 0.5rem;
+}
+
+.demo-disclaimer p {
+  color: #856404;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Placeholder Content Styles */
+.placeholder-content {
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.placeholder-content h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.placeholder-content ul {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.placeholder-content li {
+  margin-bottom: 0.5rem;
+  color: #555;
+} 

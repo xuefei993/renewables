@@ -1,0 +1,72 @@
+/* Address Input - Base Layout & Method Selector */
+
+/* Address Input Step Styles */
+.address-input-step {
+  max-width: 900px; /* 从800px增加到900px以适应更大的图表 */
+}
+
+/* Method Selector */
+.method-selector {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.method-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.method-selector h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.method-selector p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.method-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.method-tab {
+  padding: 1rem 2rem;
+  border: 2px solid #e0e0e0;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 180px;
+}
+
+.method-tab:hover {
+  border-color: #3498db;
+  background-color: #f8fbff;
+}
+
+.method-tab.active {
+  border-color: #3498db;
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Method Content */
+.method-content {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+} 

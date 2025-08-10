@@ -1,0 +1,453 @@
+.equipment-comparison {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.comparison-header h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.comparison-header p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Equipment Selection Section */
+.equipment-selection-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.equipment-selection-section h4 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.equipment-type-selection {
+  margin-bottom: 25px;
+}
+
+.equipment-type-selection h5 {
+  color: #34495e;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.model-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.model-selection-item {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.model-selection-item:hover {
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.model-checkbox {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.model-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.model-checkbox input:checked ~ .checkmark {
+  background-color: #3498db;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.model-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.model-checkbox .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.model-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.model-name {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.model-manufacturer {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.model-specs {
+  color: #34495e;
+  font-size: 14px;
+  background: #f8f9fa;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.compare-button {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.compare-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2980b9, #1f618d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.compare-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Comparison Results */
+.comparison-results {
+  margin-top: 40px;
+}
+
+.comparison-results h4 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.equipment-comparison-table {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-comparison-table h5 {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: white;
+  margin: 0;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.comparison-table-container {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.comparison-table th {
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 15px 12px;
+  text-align: left;
+  border-bottom: 2px solid #e9ecef;
+  white-space: nowrap;
+}
+
+.comparison-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f1f3f4;
+  vertical-align: top;
+}
+
+.comparison-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.equipment-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.equipment-name strong {
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.equipment-name small {
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+.specifications {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.specifications div {
+  margin-bottom: 2px;
+  color: #34495e;
+}
+
+.clickable-header {
+  cursor: help;
+  position: relative;
+}
+
+.clickable-header::after {
+  content: "📊";
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.clickable-cell {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 8px 12px !important;
+  margin: -8px -12px;
+}
+
+.clickable-cell:hover {
+  background: #e3f2fd;
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.suitability-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.suitability-badge.excellent {
+  background: #d4edda;
+  color: #155724;
+}
+
+.suitability-badge.good {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.suitability-badge.fair {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.suitability-badge.poor {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Chart Modal */
+.chart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.chart-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.chart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+  background: #f8f9fa;
+}
+
+.chart-modal-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.chart-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chart-close-button:hover {
+  background: #e9ecef;
+  color: #2c3e50;
+}
+
+.chart-container {
+  padding: 20px;
+  height: 400px;
+}
+
+/* Loading State */
+.equipment-comparison-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #7f8c8d;
+}
+
+.equipment-comparison-loading h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.comparison-actions {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e9ecef;
+}
+
+.comparison-actions .btn {
+  min-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .equipment-comparison {
+    padding: 15px;
+  }
+  
+  .model-selection-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-table {
+    font-size: 12px;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 10px 8px;
+  }
+  
+  .chart-modal {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .chart-container {
+    height: 300px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table th,
+  .comparison-table td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+  
+  .equipment-name strong {
+    font-size: 13px;
+  }
+  
+  .chart-modal-header h4 {
+    font-size: 16px;
+  }
+} 

@@ -1,0 +1,216 @@
+/* Address Input - Climate Chart Styles */
+
+.climate-chart-container {
+  margin-top: 2rem;
+  padding: 2.5rem; /* 增加内边距 */
+  background-color: white;
+  border-radius: 16px; /* 增加圆角 */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* 增强阴影 */
+}
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 2.5rem; /* 增加间距 */
+}
+
+.chart-header h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem; /* 增大字体 */
+  font-weight: 700;
+}
+
+.chart-header p {
+  color: #666;
+  font-size: 1rem; /* 增大字体 */
+}
+
+/* Combined Chart Styles */
+.combined-chart-container {
+  text-align: center;
+}
+
+.combined-chart-container h4 {
+  color: #2c3e50;
+  margin-bottom: 2rem; /* 增加间距 */
+  font-size: 1.4rem; /* 增大字体 */
+  font-weight: 600;
+}
+
+.data-source {
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #6c757d;
+}
+
+.data-source small {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* 增加间距 */
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* 增加间距 */
+  font-size: 1rem; /* 增大字体 */
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.legend-color {
+  width: 20px; /* 增大图标 */
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid white; /* 增加边框 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* 增强阴影 */
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.climate-chart {
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.data-point {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.data-point:hover {
+  r: 8; /* 悬停时增大 */
+  filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.3)) !important;
+}
+
+/* Tooltip Styles */
+.chart-tooltip {
+  z-index: 1000;
+}
+
+.tooltip-content {
+  background-color: rgba(44, 62, 80, 0.95);
+  color: white;
+  padding: 1rem; /* 增加内边距 */
+  border-radius: 8px; /* 增加圆角 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* 增强阴影 */
+  min-width: 220px; /* 增加最小宽度 */
+  font-size: 0.95rem; /* 增大字体 */
+  backdrop-filter: blur(5px); /* 添加背景模糊 */
+}
+
+.tooltip-title {
+  font-weight: 700; /* 增加字重 */
+  margin-bottom: 0.75rem; /* 增加间距 */
+  text-align: center;
+  color: #ecf0f1;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* 增加边框厚度 */
+  padding-bottom: 0.5rem; /* 增加内边距 */
+  font-size: 1.1rem; /* 增大字体 */
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* 增加间距 */
+  margin-bottom: 0.5rem; /* 增加间距 */
+  font-size: 0.95rem;
+}
+
+.tooltip-item:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-color {
+  width: 14px; /* 增大尺寸 */
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white; /* 增加边框 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Combined Stats */
+.chart-stats-combined {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem; /* 增加间距 */
+  margin-top: 2.5rem; /* 增加间距 */
+  padding: 2rem; /* 增加内边距 */
+  background-color: #f8f9fa;
+  border-radius: 12px; /* 增加圆角 */
+  border: 1px solid #e9ecef;
+}
+
+.stat-group {
+  text-align: center;
+}
+
+.stat-group h5 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem; /* 增加间距 */
+  font-size: 1.2rem; /* 增大字体 */
+  font-weight: 700; /* 增加字重 */
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem; /* 增加间距 */
+  padding: 0.5rem 0; /* 增加内边距 */
+  border-bottom: 1px solid rgba(44, 62, 80, 0.08);
+}
+
+.stat:last-child {
+  border-bottom: none;
+}
+
+.stat span {
+  color: #666;
+  font-size: 0.95rem; /* 增大字体 */
+  font-weight: 500;
+}
+
+.stat strong {
+  color: #2c3e50;
+  font-size: 1rem; /* 增大字体 */
+  font-weight: 700; /* 增加字重 */
+}
+
+/* Chart States */
+.climate-chart-placeholder,
+.climate-chart-loading,
+.climate-chart-error {
+  text-align: center;
+  padding: 4rem 2rem; /* 增加内边距 */
+  color: #666;
+}
+
+.climate-chart-loading .loading-spinner {
+  font-size: 2.5rem; /* 增大字体 */
+  margin-bottom: 1.5rem; /* 增加间距 */
+  animation: spin 1s linear infinite;
+}
+
+.climate-chart-error {
+  color: #e74c3c;
+} 

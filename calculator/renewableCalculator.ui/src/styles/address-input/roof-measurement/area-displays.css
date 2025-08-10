@@ -1,0 +1,91 @@
+/* Area display styles for roof measurement section */
+
+.area-display {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #0ea5e9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.area-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin-bottom: 0.5rem;
+}
+
+.area-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.area-conversion {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Projected area display */
+.projected-area-display {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+.projected-area-display .area-value {
+  color: #92400e;
+  font-size: 1.2rem;
+}
+
+.projected-area-display .area-label {
+  color: #b45309;
+}
+
+/* Two-column layout for area displays */
+.area-displays-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* Highlight the actual roof area calculation */
+.detail-row.highlight {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 2px solid #fb923c;
+  box-shadow: 0 4px 8px rgba(251, 146, 60, 0.2);
+  transform: scale(1.02);
+}
+
+.detail-row.highlight .detail-label {
+  color: #c2410c;
+  font-weight: 600;
+}
+
+.detail-row.highlight .detail-value {
+  color: #c2410c;
+  font-weight: 700;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .area-displays-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .area-value {
+    font-size: 1.3rem;
+  }
+  
+  .projected-area-display .area-value {
+    font-size: 1.1rem;
+  }
+} 
