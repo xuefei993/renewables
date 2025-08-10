@@ -438,7 +438,7 @@ const EnergyDemand = ({ data, onDataChange, onNext, onBack }) => {
           onClick={handleNext}
           disabled={!isFormValid()}
         >
-          Next: Solar Configuration
+          Next: Tariffs
         </button>
       </div>
     </div>
